@@ -1,0 +1,28 @@
+{
+  "rules": [
+    {
+      "path": ["iPhone 7"],
+      "metadata": {
+        "model": "iPhone 7"
+      }
+    },
+    {
+      "path": ["iPad Pro"],
+      "metadata": {
+        "model": "iPad Pro"
+      }
+    },
+    {
+      "path": ["GoPro HERO7 Black"],
+      "metadata": {
+        "cameraModelName": "HERO7 Black"
+      }
+    },
+    {
+      "path": ["Canon EOS 70D"],
+      "metadata": {
+        "model": "Canon EOS 70D"
+      }
+    }
+  ]
+}
