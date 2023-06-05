@@ -1,11 +1,12 @@
 {
-  "name": "media-tools",
+  "name": "@ooit/media-tools",
   "version": "1.0.0",
   "description": "Various media tools: smart archive, et al",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "ts-mocha test/**/*.test.ts",
     "start": "ts-node src/index.ts",
+    "prepare": "npm run build",
     "build": "tsc"
   },
   "keywords": [
@@ -16,7 +17,7 @@
     "various",
     "organize"
   ],
-  "author": "tonibuenter",
+  "author": "Toni A. Buenter",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.5",
@@ -38,7 +39,10 @@
     "moment": "^2.29.4"
   },
   "bin": {
-    "mediatools": "dist/index.js",
     "mediatools-cli": "dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonibuenter/media-tools.git"
   }
 }
