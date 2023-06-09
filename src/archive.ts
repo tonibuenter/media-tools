@@ -35,10 +35,10 @@ async function archiveMediaFiles({ src, dest, extensions, dirPrefix, dryrun }: A
         const outDir = path.join(dest, `${dirPrefix}${modifedYear}`, modifedDate);
         fileSizeSum += stats.size;
 
-        const extension = path.extname(file).toLowerCase();
+        const extension = path.extname(file);
         const baseName = path.basename(file, extension).toLowerCase();
         const dateString = mdate.format('YYYY_MM_DD__HH_mm');
-        const destFile = path.join(outDir, `${dateString}-${baseName}${extension}`);
+        const destFile = path.join(outDir, `${dateString}-${baseName}${extension.toLowerCase()}`);
         if (fs.existsSync(destFile)) {
           console.log(`The file ${path.basename(destFile)} already exists in ${path.dirname(destFile)}!`);
         } else {

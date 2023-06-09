@@ -22,7 +22,8 @@ export async function mediatools(args: string[]): Promise<CommandLineOptions | n
       return archive({ src: options['src'], dest: options['dest'], dryrun: options['dryrun'] });
     }
   } catch (e) {
-    console.warn('usage: mediatools archive --src src-dir --dest dest-dir');
+    console.error('Error occurred:', e);
   }
+  console.warn('usage: mediatools --archive --src src-dir --dest dest-dir');
   return 1;
 }

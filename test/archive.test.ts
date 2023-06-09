@@ -9,7 +9,7 @@ describe('archive', function () {
   const dest = path.join(projectDir, 'temp', 'dest');
   before(() => {
     try {
-      fs.rmdirSync(dest, { recursive: true });
+      fs.rmSync(dest, { recursive: true, force: true });
     } catch (e) {
       console.debug(e);
     }
@@ -17,7 +17,7 @@ describe('archive', function () {
   });
 
   after(() => {
-    fs.rmdirSync(dest, { recursive: true });
+    fs.rmSync(dest, { recursive: true, force: true });
   });
 
   it('option --test-options', async () => {
