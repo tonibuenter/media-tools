@@ -1,2 +1,2 @@
-import { mediatools } from 'mediatools';
+import { mediatools } from './mediatools';
 export { mediatools };

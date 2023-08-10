@@ -1,7 +1,5 @@
 import { assert } from 'chai';
 import * as path from 'path';
-import * as fs from 'fs';
-import { mediatools } from '../src/mediatools';
 
 describe('path-tests', function () {
   it('base-name-etc', async () => {

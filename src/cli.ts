@@ -4,7 +4,7 @@ import { mediatools } from './mediatools';
 import * as process from 'process';
 
 (async function foo() {
-  await mediatools(process.argv)
+  await mediatools()
     .catch((error) => {
       console.error(error);
       process.exit(1);

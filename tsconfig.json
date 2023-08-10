@@ -1,26 +1,16 @@
 {
   "compilerOptions": {
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
     "module": "commonjs",
-    "target": "es2020",
-    "declaration": true,
-    "outDir": "./dist",
-    "baseUrl": "./src",
     "esModuleInterop": true,
-    "typeRoots": [
-      "./types",
-      "./node_modules/@types"
-    ],
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "strict": false
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist"
   },
-  "include": [
-    "src/**/*.ts"
+  "lib": [
+    "es2015"
   ],
-  "exclude": [
-    "node_modules",
-    "src/__tests__"
+  "src": [
+    "src"
   ]
 }

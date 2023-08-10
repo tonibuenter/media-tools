@@ -6,7 +6,7 @@
 
 ## How to Use
 
-Execute `mediatools --archive --src source-directory --dest destination-directory`.
+Execute `mediatools archive --src source-directory --dest destination-directory`.
 
 This command will create a `destination-directory` folder, which will contain subfolders
 named `albumYYYY`, `filmYYYY`, `audioYYYY`. Each of these will further contain subfolders named based on the creation

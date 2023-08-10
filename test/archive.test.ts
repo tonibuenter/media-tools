@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import * as path from 'path';
 import * as fs from 'fs';
-import { mediatools } from '../src/mediatools';
+import { mediatools } from '../src';
 
 describe('archive', function () {
   const projectDir = process.cwd();
@@ -20,18 +20,19 @@ describe('archive', function () {
     fs.rmSync(dest, { recursive: true, force: true });
   });
 
-  it('option --test-options', async () => {
-    const options = await mediatools(['--test-options', '--archive', '--src', src, '--dest', dest]);
+  it('option test', async () => {
+    process.argv = ['node', 'test.js', 'test', '--src', src, '--dest', dest];
+    const options = await mediatools();
     assert.isTrue(!!options);
-    assert.isTrue(options['test-options']);
-    assert.isTrue(options['archive']);
+    assert.isTrue(options['command'] === 'test');
     assert.equal(src, options['src']);
     assert.equal(dest, options['dest']);
   });
 
   it('testing --archive with real data', async () => {
     this.timeout(10000);
-    await mediatools(['--archive', '--src', src, '--dest', dest]);
+    process.argv = ['node', 'test.js', 'archive', '--src', src, '--dest', dest];
+    await mediatools();
 
     assert.isTrue(fs.existsSync(src), 'does src exist?');
     assert.isTrue(fs.existsSync(dest), 'does dest exist?');
