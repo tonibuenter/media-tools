@@ -1,6 +1,6 @@
 {
   "name": "@ooit/media-tools",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Various media tools: smart archive and more.",
   "main": "dist/index.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "moment": "^2.29.4"
   },
   "bin": {
-    "mediatools-cli": "dist/cli.js"
+    "mediatools-cli": "dist/src/cli.js"
   },
   "repository": {
     "type": "git",
